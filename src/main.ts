@@ -22,8 +22,9 @@ async function bootstrap() {
 
   const config = new DocumentBuilder() 
     .setTitle('E-Commerce App Documentation Week 15')
-    .setDescription('My Backend Documentation')
+    .setDescription("My Backend Documentation, You don't need to copy auth bearer because i'm using session token. Im using auth bearer just for people can easily see the endpoint that need to login first. (Appear with locked button)")
     .setVersion('1.0')
+    .addBearerAuth()
     .build();
     
   const document = SwaggerModule.createDocument(app, config);

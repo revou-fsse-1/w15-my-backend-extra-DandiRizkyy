@@ -1,7 +1,7 @@
 import { Controller, Get, UseGuards } from '@nestjs/common';
 import { UserService } from './user.service';
 import { AuthenticatedGuard } from 'src/auth/authenticated.guard';
-import { ApiOkResponse, ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { UserEntity } from './entities/user.entity';
 
 @Controller('users')
@@ -11,6 +11,7 @@ export class UserController {
 
     @UseGuards(AuthenticatedGuard)
     @ApiOkResponse({type: UserEntity, isArray: true})
+    @ApiBearerAuth()
     @Get()
     async getAllUsers(){
         return await this.userService.getAllUsers();

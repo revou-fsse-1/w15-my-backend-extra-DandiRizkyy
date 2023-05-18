@@ -102,7 +102,7 @@ Here you can find my documentation using swagger : https://w15-webapp-dandi.onre
 
 ### Endpoint Documentation
 
-1. First of all, all you need to do is registering your email and password first using the following links
+1. First of all, all you need to do is registering your email and password first.
 
 - `register`
 
@@ -110,6 +110,11 @@ Here you can find my documentation using swagger : https://w15-webapp-dandi.onre
   || Register Endpoint ||
 
   POST     /auth/register
+
+  {
+  "email": "example@gmail.com",
+  "password": "example123"
+  }
   ```
 
 2. After that, you can login with email and password that you registered before
@@ -120,6 +125,11 @@ Here you can find my documentation using swagger : https://w15-webapp-dandi.onre
   || Login Endpoint ||
 
   POST     /auth/login
+
+  {
+  "email": "example@gmail.com",
+  "password": "example123"
+  }
   ```
 
 3. After you successfully login, you can access the resources endpoint such as `users` and `products`.
@@ -138,10 +148,38 @@ Here you can find my documentation using swagger : https://w15-webapp-dandi.onre
   || Products Endpoint ||
 
   GET     /products
+  --------------------
   GET     /products/1
+  --------------------
   POST    /products
+
+  {
+  "title": "Example Title",
+  "description": "Example Description",
+  "category": "Example Category",
+  "userId": 1
+  }
+  --------------------
   PUT     /products/1
+
+  {
+  "title": "Example Title",
+  "description": "Example Description",
+  "category": "Example Category",
+  "userId": 1
+  }
+  --------------------
   PATCH   /products/1
+
+  *Optional field, you can change either one value or multiple value at once
+
+  {
+  "title": "Example Title",
+  "description": "Example Description",
+  "category": "Example Category",
+  "userId": 1
+  }
+  --------------------
   DELETE  /products/1
 
   ```
