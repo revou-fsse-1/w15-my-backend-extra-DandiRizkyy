@@ -10,7 +10,7 @@ For this week assignment, i'm trying to containerizing the apps from week 14 usi
 
 ---
 
-My Docker Hub Images : https://hub.docker.com/r/dandirizkyy/dandirizky-w15-app
+My Docker Hub Images : https://hub.docker.com/r/dandirizkyy/w15-dandi-myapp
 
 ## Installation 🔨
 
