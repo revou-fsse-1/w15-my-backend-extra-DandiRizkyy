@@ -11,7 +11,6 @@ RUN pnpm install -r -offline -prod
 
 COPY . ./
 RUN pnpm add @nestjs/cli
-RUN pnpm add @nestjs/swagger swagger-ui-express
 RUN pnpm add @prisma/client
 RUN npx prisma generate
 RUN pnpm build

@@ -6,6 +6,7 @@ import { PatchProduct } from './dto/patch-product.dto';
 import { AuthenticatedGuard } from 'src/auth/authenticated.guard';
 import { ApiCreatedResponse, ApiOkResponse, ApiQuery, ApiTags } from '@nestjs/swagger';
 import { ProductEntity } from './entities/product.entity';
+import { ProductRelationEntity } from './entities/product-relation.entity';
 
 @Controller('products')
 @ApiTags('products')
@@ -23,7 +24,7 @@ export class ProductController {
 
     // get by id
     @UseGuards(AuthenticatedGuard)
-    @ApiOkResponse({type: ProductEntity, isArray: true})
+    @ApiOkResponse({type: ProductRelationEntity, isArray: true})
     @Get(':id')
     async getProductById(@Param('id', ParseIntPipe) id: number){
         return await this.productService.getProductById(id)

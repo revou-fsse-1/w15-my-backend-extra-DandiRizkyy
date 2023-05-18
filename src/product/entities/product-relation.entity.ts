@@ -2,7 +2,7 @@ import { ApiProperty } from "@nestjs/swagger";
 import { Product } from "@prisma/client";
 import { UserEntity } from "src/user/entities/user.entity";
 
-export class ProductEntity implements Product{
+export class ProductRelationEntity implements Product{
     @ApiProperty({default: 1})
     id: number;
 
@@ -24,4 +24,8 @@ export class ProductEntity implements Product{
     @ApiProperty()
     updatedAt: Date;
 
-}
+    // add relation to user entity
+    @ApiProperty({required: false, type: UserEntity})
+    user?: UserEntity;
+
+    }
