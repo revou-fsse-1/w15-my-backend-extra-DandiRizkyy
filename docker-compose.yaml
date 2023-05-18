@@ -3,7 +3,7 @@ version: '3.9'
 services:
   database:
     image: postgres:alpine
-    container_name: w15-dandi-database
+    container_name: example-database
     hostname: database
     volumes:
     - postgres:/var/lib/postgresql/data
@@ -13,8 +13,8 @@ services:
     - .env
     restart: always
   app:
-    image: dandirizkyy/w15-backend-extra-dandirizkyy
-    container_name: w15-dandi-app
+    image: dandirizkyy/example-image
+    container_name: example-app
     build: .
     ports:
     - 4001:4001

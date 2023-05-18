@@ -9,7 +9,7 @@ import { instanceToPlain } from 'class-transformer';
 @Injectable()
 export class ProductService {
   constructor(private prismaService: PrismaService) {}
-
+  
   // business logic get all product + query
   async getAllProducts(query: string) {
     return await this.prismaService.product.findMany({
