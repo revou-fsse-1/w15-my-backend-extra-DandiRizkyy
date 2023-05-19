@@ -96,7 +96,7 @@ docker-compose stop
 
 ### Swagger Documentation
 
-Here you can find my documentation using swagger : https://w15-mybackendapp-dandi.onrender.com/
+Here you can find my documentation using swagger : https://w15-mybackendapp-dandi.onrender.com/docs
 
 ---
 
