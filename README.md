@@ -35,7 +35,7 @@ version: '3.9'
 services:
   database:
     image: postgres:alpine
-    container_name: dandirizky-database
+    container_name: dandirizky-mydatabase
     hostname: database
     volumes:
     - postgres:/var/lib/postgresql/data
@@ -45,8 +45,8 @@ services:
     - .env
     restart: always
   app:
-    image: dandirizkyy/dandirizky-w15-app
-    container_name: dandirizky-app
+    image: dandirizkyy/dandirizky-w15-myapp
+    container_name: dandirizky-myapp
     build: .
     ports:
     - 4001:4001
